@@ -1,0 +1,11 @@
+language:
+  - scala
+  - java
+scala: 2.11
+jdk: oraclejdk8
+script: gradle clean build
+cache:
+  directories:
+    - $HOME/.gradle/
+    - .gradle/
+
