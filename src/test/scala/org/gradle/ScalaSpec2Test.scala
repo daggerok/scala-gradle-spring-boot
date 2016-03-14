@@ -15,7 +15,7 @@ class ScalaSpec2Test extends Specification {
     add posetives                    $posetives
     add negatives                    $negatives
     add zeroes                       $zeroes
-"""
+                                                """
 
   def posetives = add(1, 2) === 3
   def negatives = add(-5, 2) === -3
