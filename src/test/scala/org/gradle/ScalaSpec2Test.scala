@@ -19,5 +19,5 @@ class ScalaSpec2Test extends Specification {
 
   def posetives = add(1, 2) === 3
   def negatives = add(-5, 2) === -3
-  def zeroes = add(0, 1) === 1
+  def zeroes = add(0, 0) === 0
 }
