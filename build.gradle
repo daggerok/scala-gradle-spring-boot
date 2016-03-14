@@ -16,10 +16,10 @@ plugins {
     id 'net.saliman.properties' version '1.4.5'
 }
 
-apply plugin: 'scala'
-apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'java'
+apply plugin: 'scala'
+apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 apply plugin: 'com.github.ben-manes.versions'
 
@@ -43,7 +43,6 @@ dependencies {
             "org.slf4j:slf4j-api:$slf4jVer",
             'org.springframework.boot:spring-boot-starter-mustache',
             'org.springframework.boot:spring-boot-devtools',
-            "org.projectlombok:lombok:$lombokVer",
             "org.webjars:bootstrap:$bootstrapVer"
     
     testCompile "junit:junit:$jUnitVer",
@@ -54,7 +53,7 @@ dependencies {
 }
 
 task app(type: JavaExec, dependsOn: classes) {
-    main = 'app.Main'
+    main = 'com.daggerok.scala.spring.Application'
     classpath sourceSets.main.runtimeClasspath,
               configurations.runtime
 }
@@ -69,5 +68,5 @@ tasks.withType(ScalaCompile) {
 task wrapper(type: Wrapper) { gradleVersion = gradleVersion }
 
 //apply plugin: 'application'
-//mainClassName = 'app.WebApp'
+//mainClassName = 'com.daggerok.scala.spring.Application'
 //run { systemProperties = System.properties }
