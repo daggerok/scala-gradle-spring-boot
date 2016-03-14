@@ -1,11 +1,10 @@
-package org.gradle
+package com.gaggerok.scala.spring
 
 import org.specs2.Specification
 import org.specs2.ScalaCheck
 import org.junit.runner.RunWith
 import org.specs2.runner.JUnitRunner
-
-import Calc._
+import com.gaggerok.scala.spring.calc.Calc
 
 @RunWith(classOf[JUnitRunner])
 class ScalaSpec2Test extends Specification {
@@ -17,7 +16,7 @@ class ScalaSpec2Test extends Specification {
     add zeroes                       $zeroes
 """
 
-  def posetives = add(1, 2) === 3
-  def negatives = add(-5, 2) === -3
-  def zeroes = add(0, 1) === 1
+  def posetives = Calc.add(1, 2) === 3
+  def negatives = Calc.add(-5, 2) === -3
+  def zeroes = Calc.add(0, 1) === 1
 }

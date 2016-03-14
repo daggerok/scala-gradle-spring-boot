@@ -1,9 +1,8 @@
-package org.gradle
+package com.gaggerok.scala.spring.calc
 
 import org.junit.Test
 import org.junit.Assert._
-
-import Calc._
+import com.gaggerok.scala.spring.calc.Calc._
 
 class ScalaJUnitTest {
   @Test def testAdd() {
