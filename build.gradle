@@ -13,7 +13,7 @@ buildscript {
 
 plugins {
     id "io.spring.dependency-management" version '0.5.6.RELEASE'
-    id 'net.saliman.properties' version '1.4.5'
+    id 'net.saliman.properties' version '1.4.4'
 }
 
 apply plugin: 'scala'
