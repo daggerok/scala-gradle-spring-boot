@@ -1,14 +1,14 @@
 package com.gaggerok.scala.spring
 
-import org.specs2.Specification
-import org.specs2.ScalaCheck
-import org.junit.runner.RunWith
-import org.specs2.runner.JUnitRunner
 import com.gaggerok.scala.spring.calc.Calc
+import org.junit.runner.RunWith
+import org.specs2.Specification
+import org.specs2.runner.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ScalaSpec2Test extends Specification {
-  def is = s2"""
+  def is =
+    s2"""
 
   The Calculator add function should
     add posetives                    $posetives
@@ -18,6 +18,8 @@ class ScalaSpec2Test extends Specification {
   """
 
   def posetives = Calc.add(1, 2) === 3
+
   def negatives = Calc.add(-5, 2) === -3
+
   def zeroes = Calc.add(0, 1) === 1
 }

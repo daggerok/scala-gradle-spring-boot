@@ -8,4 +8,6 @@ object Application extends App {
 }
 
 @SpringBootApplication
-class Application // put here your bean configuration
+class Application
+
+// put here your bean configuration
